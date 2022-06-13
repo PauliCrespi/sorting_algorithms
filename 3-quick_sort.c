@@ -30,9 +30,9 @@ size_t lomuto(int *array, size_t size, int low, int high)
 	help = array[i + 1];
 	array[i + 1] = array[high];
 	array[high] = help;
-	if (array[++j] != array[high])
+	if (array[++i] != array[high])
 		print_array(array, size);
-	return (i + 1);
+	return (i);
 }
 
 /**
